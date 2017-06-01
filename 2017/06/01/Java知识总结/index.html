@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>变量和基本类型 | 剑凌天下 | Just try it and Do it the best!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="java,变量,基本数据类型">
+    <meta name="description" content="变量和基本类型">
+<meta name="keywords" content="java,变量,基本数据类型">
+<meta property="og:type" content="article">
+<meta property="og:title" content="变量和基本类型">
+<meta property="og:url" content="http://ling007.cn/2017/06/01/Java知识总结/index.html">
+<meta property="og:site_name" content="剑凌天下">
+<meta property="og:description" content="变量和基本类型">
+<meta property="og:updated_time" content="2017-06-01T08:52:33.037Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="变量和基本类型">
+<meta name="twitter:description" content="变量和基本类型">
+    
+        <link rel="alternate" type="application/atom+xml" title="剑凌天下" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">bharals</h5>
+          <a href="mailto:bharals@163.com" title="bharals@163.com" class="mail">bharals@163.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/bharals" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://www.weibo.com" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">变量和基本类型</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">变量和基本类型</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-06-01T08:52:02.000Z" itemprop="datePublished" class="page-time">
+  2017-06-01
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/变量和基本类型/">变量和基本类型</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#变量和基本类型"><span class="post-toc-number">1.</span> <span class="post-toc-text">变量和基本类型</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是变量"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">什么是变量</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-Java知识总结"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">变量和基本类型</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-06-01 16:52:02" datetime="2017-06-01T08:52:02.000Z"  itemprop="datePublished">2017-06-01</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/变量和基本类型/">变量和基本类型</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="变量和基本类型"><a href="#变量和基本类型" class="headerlink" title="变量和基本类型"></a>变量和基本类型</h2><h3 id="什么是变量"><a href="#什么是变量" class="headerlink" title="什么是变量"></a>什么是变量</h3><p>在软件系统中，是将数据存储在内存中的，而对于内存中的<code>数据的引用</code>就是<code>变量</code>，可以理解为变量就是<code>内存中数据的代词</code>。</p>
+<blockquote>
+<p>变量就是指代在内存中开辟的<code>存储空间</code>，用于存放运算过程中需要用到的数据。 </p>
+</blockquote>
+<p>对于变量，我们需要关注一下几个方面：</p>
+<ul>
+<li>变量的声明：用特定的语法声明一个变量，让运行环境为其<code>分配空间</code></li>
+<li>变量的命名：需要一个见名知意的名字，需要符合Java语言规范</li>
+<li>变量的初始化：变量声明后，要为其<code>赋一个初值</code>后再使用</li>
+<li>变量的访问：可以对变量中的数据进行存取、操作，但是必须和其<code>类型匹配</code></li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//变量：基本数据类型（8个） vs 引用数据类型（类、接口、数组）</span></div><div class="line"><span class="comment">//1.java中的变量定义的格式：数据类型  变量名 = 初始化值</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">TestVeriable</span> </span>&#123;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		<span class="comment">//2.变量得先定义，后使用</span></div><div class="line">		<span class="keyword">int</span> myInt1 = <span class="number">10</span>;</div><div class="line">		<span class="keyword">double</span> d = <span class="number">12.3</span>;</div><div class="line">		</div><div class="line">		System.out.println(myInt1);</div><div class="line">		System.out.println(myInt1 + d);</div><div class="line">		<span class="comment">//i1超出了其作用的范围，不可使用。</span></div><div class="line">		<span class="comment">//System.out.println(i1);</span></div><div class="line"></div><div class="line">		<span class="comment">//3.整型：byte(-128~+127)  short  int（默认类型） long</span></div><div class="line">		<span class="keyword">byte</span> b1 = <span class="number">12</span>;</div><div class="line">		<span class="comment">//byte b2 = 128;</span></div><div class="line">		<span class="keyword">short</span> s1 = <span class="number">128</span>;</div><div class="line">		<span class="keyword">int</span> i1 = <span class="number">12</span>;</div><div class="line">		<span class="comment">//定义long型变量，值的末尾加“L”或“l”</span></div><div class="line">		<span class="keyword">long</span> l1 = <span class="number">2134123351345325L</span>;</div><div class="line">		System.out.println(l1);</div><div class="line"></div><div class="line">		<span class="comment">//4.浮点型（带小数点的数值）：float   double（默认类型）</span></div><div class="line">		<span class="keyword">double</span> d1 = <span class="number">12.3</span>;</div><div class="line">		<span class="comment">//声明float类型的浮点型数据，末尾要加“F”或者“f”</span></div><div class="line">		<span class="keyword">float</span> f1 = <span class="number">12.3F</span>;</div><div class="line">		System.out.println(f1);</div><div class="line"></div><div class="line">		<span class="comment">//5.字符型（=两个字节）：char 只能表示一个字符(英文、中文、标点符号、日文、。。。)</span></div><div class="line">		<span class="keyword">char</span> c1 = <span class="string">'a'</span>;</div><div class="line">		<span class="comment">//char c2 = 'ab';</span></div><div class="line">		String str = <span class="string">"ab"</span>;</div><div class="line">		<span class="keyword">char</span> c3 = <span class="string">'中'</span>;</div><div class="line">		String str1 = <span class="string">"中国"</span>;</div><div class="line">		<span class="comment">//可以表示转义字符</span></div><div class="line">		<span class="keyword">char</span> c4 = <span class="string">'\t'</span>;</div><div class="line">		<span class="keyword">char</span> c5 = <span class="string">'\n'</span>;</div><div class="line">		System.out.println(<span class="string">"abc"</span> + c5 + <span class="string">"def"</span>);</div><div class="line">		<span class="comment">//了解</span></div><div class="line">		<span class="keyword">char</span> c6 = <span class="string">'\u1234'</span>;</div><div class="line">		System.out.println(c6);</div><div class="line"></div><div class="line">		<span class="comment">//6.布尔类型：boolean  只能够取值为true 或 false 。不能取值null</span></div><div class="line">		<span class="keyword">boolean</span> bool1 = <span class="keyword">true</span>;</div><div class="line">		<span class="keyword">if</span>(bool1)&#123;</div><div class="line">			System.out.println(<span class="string">"佟老师是个\"帅\"哥"</span>);</div><div class="line">		&#125;<span class="keyword">else</span>&#123;</div><div class="line">			System.out.println(<span class="string">"你在说谎！"</span>);</div><div class="line">		&#125;</div><div class="line"></div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">method1</span><span class="params">()</span></span>&#123;</div><div class="line">		<span class="keyword">int</span> i1 = <span class="number">10</span>;</div><div class="line">		System.out.println(i1);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-06-01T08:52:33.037Z" itemprop="dateUpdated">2017-06-01 16:52:33</time>
+</span><br>
+
+
+        
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2017/06/01/Java知识总结/" target="_blank" rel="external">http://ling007.cn/2017/06/01/Java知识总结/</a>
+        
+    </div>
+    <footer>
+        <a href="http://ling007.cn">
+            <img src="/img/avatar.jpg" alt="bharals">
+            bharals
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/变量/">变量</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/基本数据类型/">基本数据类型</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://ling007.cn/2017/06/01/Java知识总结/&title=《变量和基本类型》 — 剑凌天下&pic=http://ling007.cn/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://ling007.cn/2017/06/01/Java知识总结/&title=《变量和基本类型》 — 剑凌天下&source=记录日常笔记" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://ling007.cn/2017/06/01/Java知识总结/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《变量和基本类型》 — 剑凌天下&url=http://ling007.cn/2017/06/01/Java知识总结/&via=http://ling007.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://ling007.cn/2017/06/01/Java知识总结/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/06/01/nodejs的nmp与npm-cache目录修改/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">nmp与npm-cache目录修改</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+    <div id="cloud-tie-wrapper" class="comments cloud-tie-wrapper"></div>
+    <script>
+    var cloudTieConfig = {
+        url: 'http://ling007.cn/2017/06/01/Java知识总结/index.html',
+        sourceId: 'Java知识总结',
+        productKey: 'true',
+        target: 'cloud-tie-wrapper',
+        pcFiles: [
+            '//unpkg.com/hexo-theme-material-indigo@latest/css/cloudTie/pc.css',
+            '//unpkg.com/hexo-theme-material-indigo@latest/js/cloudTie/pc.min.js',
+        ],
+        mobileFiles: [
+            '//unpkg.com/hexo-theme-material-indigo@latest/css/cloudTie/mobile.css',
+            '//unpkg.com/hexo-theme-material-indigo@latest/js/cloudTie/mobile.min.js'
+        ]
+    };
+    </script>
+    <script src="//unpkg.com/hexo-theme-material-indigo@latest/js/cloudTie/loader.min.js"></script>
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我吃包辣条 ^-^
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/img/wechat.jpg" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/img/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>bharals &copy; 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://ling007.cn/2017/06/01/Java知识总结/&title=《变量和基本类型》 — 剑凌天下&pic=http://ling007.cn/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://ling007.cn/2017/06/01/Java知识总结/&title=《变量和基本类型》 — 剑凌天下&source=记录日常笔记" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://ling007.cn/2017/06/01/Java知识总结/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《变量和基本类型》 — 剑凌天下&url=http://ling007.cn/2017/06/01/Java知识总结/&via=http://ling007.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://ling007.cn/2017/06/01/Java知识总结/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJElEQVR42u3aS27DMBAEUd//0sraCCxX90QBSBZXhi1QfF4M5sPXC6/rdv1+8tMO98+QX0dLhgwZyzLIEcn3/C1kz/TvkyFDxgmMSYi8Py759Z6BgrIMGTJkhEEwDdZkHxkyZMjoGN2T3W4yZMiQ0QU+3iwje3ZBWYYMGScw0sP95+dH5hsyZMhYinGFi/Dm4TI+lQwZMrZm8ADXpYxkAPBXA1EZMmTszUg3Jd+Tq2N8nMkvn8mQIWNvBg+U5OjkWF3rray8ZciQsSyjSwrJsboQnLbe3mpxGTJkbMqYJGTpAJK35HhTT4YMGWcynjhEVySPZq0yZMjYiJFuQZI2UqZyAAr6MmTI2JrBYxdvfqWDSXI5g7f2ZMiQsR9jcv1rnt6RpBNlgzJkyNia0SV5PDQT/DxBlCFDxgkM3vQnwZEfvWvtxSNMGTJkLM7oguMogQOFMS+Vyw6fDBkylmKk48aucJ0UyZMnZciQsR/jul1dSZmGVA7+UsTKkCFjO0YaTLsX82I4fbsMGTLOYXQvmzfReAH85S+TIUPGYQxe3PKwG1fSk9xWhgwZGzGucPFhZ3fxgo8rZMiQcQ6jC3Yk7HbXOIKStYPJkCFjWUYaIjk1TT3TgCtDhozTGGlDn48qSUidI2XIkCGDjzB5M45fwiBjAxkyZMh4usXGy+CPT8qQIeMABr82QS6BdaEz3V+GDBnnMHjpOB8SpKPTyR8kQ4aMLRg/L8NBzwF2seQAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+</body>
+</html>

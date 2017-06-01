@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    <title>nmp与npm-cache目录修改 | 剑凌天下 | Just try it and Do it the best!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="nodejs,npm,npm-cache">
+    <meta name="description" content="nmp与npm-cache目录修改">
+<meta name="keywords" content="nodejs,npm,npm-cache">
+<meta property="og:type" content="article">
+<meta property="og:title" content="nmp与npm-cache目录修改">
+<meta property="og:url" content="http://ling007.cn/2017/06/01/nodejs的nmp与npm-cache目录修改/index.html">
+<meta property="og:site_name" content="剑凌天下">
+<meta property="og:description" content="nmp与npm-cache目录修改">
+<meta property="og:updated_time" content="2017-06-01T05:50:12.444Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="nmp与npm-cache目录修改">
+<meta name="twitter:description" content="nmp与npm-cache目录修改">
+    
+        <link rel="alternate" type="application/atom+xml" title="剑凌天下" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu"  >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">bharals</h5>
+          <a href="mailto:bharals@163.com" title="bharals@163.com" class="mail">bharals@163.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/bharals" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://www.weibo.com" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">nmp与npm-cache目录修改</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">nmp与npm-cache目录修改</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2017-06-01T05:09:27.000Z" itemprop="datePublished" class="page-time">
+  2017-06-01
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodejs/">nodejs</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#nmp与npm-cache目录修改"><span class="post-toc-number">1.</span> <span class="post-toc-text">nmp与npm-cache目录修改</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#修改npm库"><span class="post-toc-number">2.</span> <span class="post-toc-text">修改npm库</span></a></li></ol>
+        </nav>
+    </aside>
+    
+<article id="post-nodejs的nmp与npm-cache目录修改"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">nmp与npm-cache目录修改</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2017-06-01 13:09:27" datetime="2017-06-01T05:09:27.000Z"  itemprop="datePublished">2017-06-01</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/nodejs/">nodejs</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h3 id="nmp与npm-cache目录修改"><a href="#nmp与npm-cache目录修改" class="headerlink" title="nmp与npm-cache目录修改"></a>nmp与npm-cache目录修改</h3><p>下载安装：<a href="https://nodejs.org/en/" target="_blank" rel="external">https://nodejs.org/en/</a></p>
+<p>默认安装完node.js后会自己安装npm，通过npm下载全局模块默认安装到 <code>C:\Users\wangyc\AppData\Roaming</code> 目录下，主要有两个文件夹：<code>npm</code>、<code>npm-cache</code><br>npm：下载的具体模块<br>npm-cache：npm的缓存文件</p>
+<p>如果需要修改此两个文件的目录，甚至将将这两个文件拷贝到无法连网的机器上呢？<br>使用命令：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm config set prefix <span class="string">"I:\Program Files\npm"</span> npm config set cache <span class="string">"I:\Program Files\npm-cache"</span></div></pre></td></tr></table></figure>
+<p>由于node全局模块大多数都是提供命令行访问的，所以还要把 <code>D:\nodejs\npm</code> 加到系统PATH里面，注意同时需要将以前的默认路径从PATH中删除。</p>
+<h3 id="修改npm库"><a href="#修改npm库" class="headerlink" title="修改npm库"></a>修改npm库</h3><p>淘宝针对国内下载npm库缓慢的问题，使用建立自己的cnpm库，可以很方便使用在公司内部使用。<br>地址：<a href="http://npm.taobao.org/" target="_blank" rel="external">http://npm.taobao.org/</a></p>
+<p>使用淘宝的NPM库镜像</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g cnpm --registry=http:<span class="comment">//registry.npm.taobao.org</span></div></pre></td></tr></table></figure>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2017-06-01T05:50:12.444Z" itemprop="dateUpdated">2017-06-01 13:50:12</time>
+</span><br>
+
+
+        
+        这里可以写作者留言，标签和 hexo 中所有变量及辅助函数等均可调用，示例：<a href="/2017/06/01/nodejs的nmp与npm-cache目录修改/" target="_blank" rel="external">http://ling007.cn/2017/06/01/nodejs的nmp与npm-cache目录修改/</a>
+        
+    </div>
+    <footer>
+        <a href="http://ling007.cn">
+            <img src="/img/avatar.jpg" alt="bharals">
+            bharals
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nodejs/">nodejs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/npm/">npm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/npm-cache/">npm-cache</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://ling007.cn/2017/06/01/nodejs的nmp与npm-cache目录修改/&title=《nmp与npm-cache目录修改》 — 剑凌天下&pic=http://ling007.cn/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://ling007.cn/2017/06/01/nodejs的nmp与npm-cache目录修改/&title=《nmp与npm-cache目录修改》 — 剑凌天下&source=记录日常笔记" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://ling007.cn/2017/06/01/nodejs的nmp与npm-cache目录修改/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《nmp与npm-cache目录修改》 — 剑凌天下&url=http://ling007.cn/2017/06/01/nodejs的nmp与npm-cache目录修改/&via=http://ling007.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://ling007.cn/2017/06/01/nodejs的nmp与npm-cache目录修改/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2017/06/01/Java知识总结/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">变量和基本类型</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2017/06/01/win10简单优化/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">win10简单优化</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+    <div id="cloud-tie-wrapper" class="comments cloud-tie-wrapper"></div>
+    <script>
+    var cloudTieConfig = {
+        url: 'http://ling007.cn/2017/06/01/nodejs的nmp与npm-cache目录修改/index.html',
+        sourceId: 'nodejs的nmp与npm-cache目录修改',
+        productKey: 'true',
+        target: 'cloud-tie-wrapper',
+        pcFiles: [
+            '//unpkg.com/hexo-theme-material-indigo@latest/css/cloudTie/pc.css',
+            '//unpkg.com/hexo-theme-material-indigo@latest/js/cloudTie/pc.min.js',
+        ],
+        mobileFiles: [
+            '//unpkg.com/hexo-theme-material-indigo@latest/css/cloudTie/mobile.css',
+            '//unpkg.com/hexo-theme-material-indigo@latest/js/cloudTie/mobile.min.js'
+        ]
+    };
+    </script>
+    <script src="//unpkg.com/hexo-theme-material-indigo@latest/js/cloudTie/loader.min.js"></script>
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我吃包辣条 ^-^
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <ul class="reward-items">
+        
+        <li>
+            <img src="/img/wechat.jpg" title="微信打赏二维码" alt="微信打赏二维码">
+            <p>微信</p>
+        </li>
+        
+
+        
+        <li>
+            <img src="/img/alipay.jpg" title="支付宝打赏二维码" alt="支付宝打赏二维码">
+            <p>支付宝</p>
+        </li>
+        
+    </ul>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p>
+            <span>Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a></span>
+            <span>bharals &copy; 2017</span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://ling007.cn/2017/06/01/nodejs的nmp与npm-cache目录修改/&title=《nmp与npm-cache目录修改》 — 剑凌天下&pic=http://ling007.cn/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://ling007.cn/2017/06/01/nodejs的nmp与npm-cache目录修改/&title=《nmp与npm-cache目录修改》 — 剑凌天下&source=记录日常笔记" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://ling007.cn/2017/06/01/nodejs的nmp与npm-cache目录修改/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《nmp与npm-cache目录修改》 — 剑凌天下&url=http://ling007.cn/2017/06/01/nodejs的nmp与npm-cache目录修改/&via=http://ling007.cn" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://ling007.cn/2017/06/01/nodejs的nmp与npm-cache目录修改/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACsUlEQVR42u3aQW7jQAwEwPz/07vAXh17u8kZxwFKp0COZNUcNHSTX1/x8eff8Xjm8Xh2VXuH5P7HDjw8PLzRo+df9vrMs09fL1byaYL/5lo8PDy8a7z8ds+Wpt1IZltI/sx4eHh4n8BrC+7khT57Bjw8PLzfxcvL5WERHCwiHh4e3ifwkjCijSFa6j7kxcPDw3sPb/NS/qm/L/b38PDw8BZd9Tw4aF/i+/GC6Gnx8PDwLvA20WoLyFtis+K4+MWAh4eHd4iXBw2zF/esYZaHF0/vj4eHh3eB1w4H5M2nWZEdve6D5AEPDw/vNi9PQTfDBG2Bnm8/+Tfi4eHhbXht3JBsAPmZvKCfLRweHh7eDd6modVGCaci2jYUxsPDwzvLu9HKmgW+echbPAkeHh7eBV7bytoMHLzeQjb3XyUreHh4eCPeJiY4O4Z1KiD+5hcDHh4e3iFeDmvXLA9wZ+ejpcfDw8O7wJu1xGajAEV1v1jo/zwhHh4e3prXxq95oJC/xNsRhLxkx8PDw7vBay9oH64NdtvNo1g+PDw8vEO8WYN/NkSVNNXyUDiKjPHw8PCu8fL20uwVvwkjihylvQAPDw9vzZuNW+W8thDf/yceHh7ebd6VojaOdGdjAXUDDA8PD2/Ny4cG8sGCWaPrXpCBh4eHd5Z3o1WfDxDMtqLk2/Hw8PDew3tPJNGGv6vGGx4eHt4F3qYxtgkXZuVy0niLrsXDw8Nb8PYbQx6t5sMEszh41d/Dw8PDi3mbl2++EG24sF/EYZGNh4eHF/NmLfxNAJFvIe0IV11Y4+Hh4S14+6GBfGRq0+5KlunKTAQeHh7eiDfbKvJSO4+Mi8IaDw8P78N4s8edhRrtBoOHh4d3mzcLI/LzZ8vuYnvAw8PDu8BrG2CzKDYJXt8zpIWHh4e34P0FAy9K33NYA94AAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+</body>
+</html>

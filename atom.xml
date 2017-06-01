@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>剑凌天下</title>
+  <subtitle>Just try it and Do it the best!</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://ling007.cn/"/>
+  <updated>2017-06-01T08:52:33.037Z</updated>
+  <id>http://ling007.cn/</id>
+  
+  <author>
+    <name>bharals</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>变量和基本类型</title>
+    <link href="http://ling007.cn/2017/06/01/Java%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"/>
+    <id>http://ling007.cn/2017/06/01/Java知识总结/</id>
+    <published>2017-06-01T08:52:02.000Z</published>
+    <updated>2017-06-01T08:52:33.037Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="变量和基本类型"><a href="#变量和基本类型" class="headerlink" title="变量和基本类型"></a>变量和基本类型</h2><h3 id="什么是变量"><a href="#什么是变量" class="headerlink" title="什么是变量"></a>什么是变量</h3><p>在软件系统中，是将数据存储在内存中的，而对于内存中的<code>数据的引用</code>就是<code>变量</code>，可以理解为变量就是<code>内存中数据的代词</code>。</p>
+<blockquote>
+<p>变量就是指代在内存中开辟的<code>存储空间</code>，用于存放运算过程中需要用到的数据。 </p>
+</blockquote>
+<p>对于变量，我们需要关注一下几个方面：</p>
+<ul>
+<li>变量的声明：用特定的语法声明一个变量，让运行环境为其<code>分配空间</code></li>
+<li>变量的命名：需要一个见名知意的名字，需要符合Java语言规范</li>
+<li>变量的初始化：变量声明后，要为其<code>赋一个初值</code>后再使用</li>
+<li>变量的访问：可以对变量中的数据进行存取、操作，但是必须和其<code>类型匹配</code></li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//变量：基本数据类型（8个） vs 引用数据类型（类、接口、数组）</span></div><div class="line"><span class="comment">//1.java中的变量定义的格式：数据类型  变量名 = 初始化值</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">TestVeriable</span> </span>&#123;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		<span class="comment">//2.变量得先定义，后使用</span></div><div class="line">		<span class="keyword">int</span> myInt1 = <span class="number">10</span>;</div><div class="line">		<span class="keyword">double</span> d = <span class="number">12.3</span>;</div><div class="line">		</div><div class="line">		System.out.println(myInt1);</div><div class="line">		System.out.println(myInt1 + d);</div><div class="line">		<span class="comment">//i1超出了其作用的范围，不可使用。</span></div><div class="line">		<span class="comment">//System.out.println(i1);</span></div><div class="line"></div><div class="line">		<span class="comment">//3.整型：byte(-128~+127)  short  int（默认类型） long</span></div><div class="line">		<span class="keyword">byte</span> b1 = <span class="number">12</span>;</div><div class="line">		<span class="comment">//byte b2 = 128;</span></div><div class="line">		<span class="keyword">short</span> s1 = <span class="number">128</span>;</div><div class="line">		<span class="keyword">int</span> i1 = <span class="number">12</span>;</div><div class="line">		<span class="comment">//定义long型变量，值的末尾加“L”或“l”</span></div><div class="line">		<span class="keyword">long</span> l1 = <span class="number">2134123351345325L</span>;</div><div class="line">		System.out.println(l1);</div><div class="line"></div><div class="line">		<span class="comment">//4.浮点型（带小数点的数值）：float   double（默认类型）</span></div><div class="line">		<span class="keyword">double</span> d1 = <span class="number">12.3</span>;</div><div class="line">		<span class="comment">//声明float类型的浮点型数据，末尾要加“F”或者“f”</span></div><div class="line">		<span class="keyword">float</span> f1 = <span class="number">12.3F</span>;</div><div class="line">		System.out.println(f1);</div><div class="line"></div><div class="line">		<span class="comment">//5.字符型（=两个字节）：char 只能表示一个字符(英文、中文、标点符号、日文、。。。)</span></div><div class="line">		<span class="keyword">char</span> c1 = <span class="string">'a'</span>;</div><div class="line">		<span class="comment">//char c2 = 'ab';</span></div><div class="line">		String str = <span class="string">"ab"</span>;</div><div class="line">		<span class="keyword">char</span> c3 = <span class="string">'中'</span>;</div><div class="line">		String str1 = <span class="string">"中国"</span>;</div><div class="line">		<span class="comment">//可以表示转义字符</span></div><div class="line">		<span class="keyword">char</span> c4 = <span class="string">'\t'</span>;</div><div class="line">		<span class="keyword">char</span> c5 = <span class="string">'\n'</span>;</div><div class="line">		System.out.println(<span class="string">"abc"</span> + c5 + <span class="string">"def"</span>);</div><div class="line">		<span class="comment">//了解</span></div><div class="line">		<span class="keyword">char</span> c6 = <span class="string">'\u1234'</span>;</div><div class="line">		System.out.println(c6);</div><div class="line"></div><div class="line">		<span class="comment">//6.布尔类型：boolean  只能够取值为true 或 false 。不能取值null</span></div><div class="line">		<span class="keyword">boolean</span> bool1 = <span class="keyword">true</span>;</div><div class="line">		<span class="keyword">if</span>(bool1)&#123;</div><div class="line">			System.out.println(<span class="string">"佟老师是个\"帅\"哥"</span>);</div><div class="line">		&#125;<span class="keyword">else</span>&#123;</div><div class="line">			System.out.println(<span class="string">"你在说谎！"</span>);</div><div class="line">		&#125;</div><div class="line"></div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">method1</span><span class="params">()</span></span>&#123;</div><div class="line">		<span class="keyword">int</span> i1 = <span class="number">10</span>;</div><div class="line">		System.out.println(i1);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      变量和基本类型
+    
+    </summary>
+    
+      <category term="变量和基本类型" scheme="http://ling007.cn/categories/%E5%8F%98%E9%87%8F%E5%92%8C%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/"/>
+    
+    
+      <category term="java" scheme="http://ling007.cn/tags/java/"/>
+    
+      <category term="变量" scheme="http://ling007.cn/tags/%E5%8F%98%E9%87%8F/"/>
+    
+      <category term="基本数据类型" scheme="http://ling007.cn/tags/%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>nmp与npm-cache目录修改</title>
+    <link href="http://ling007.cn/2017/06/01/nodejs%E7%9A%84nmp%E4%B8%8Enpm-cache%E7%9B%AE%E5%BD%95%E4%BF%AE%E6%94%B9/"/>
+    <id>http://ling007.cn/2017/06/01/nodejs的nmp与npm-cache目录修改/</id>
+    <published>2017-06-01T05:09:27.000Z</published>
+    <updated>2017-06-01T05:50:12.444Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="nmp与npm-cache目录修改"><a href="#nmp与npm-cache目录修改" class="headerlink" title="nmp与npm-cache目录修改"></a>nmp与npm-cache目录修改</h3><p>下载安装：<a href="https://nodejs.org/en/" target="_blank" rel="external">https://nodejs.org/en/</a></p>
+<p>默认安装完node.js后会自己安装npm，通过npm下载全局模块默认安装到 <code>C:\Users\wangyc\AppData\Roaming</code> 目录下，主要有两个文件夹：<code>npm</code>、<code>npm-cache</code><br>npm：下载的具体模块<br>npm-cache：npm的缓存文件</p>
+<p>如果需要修改此两个文件的目录，甚至将将这两个文件拷贝到无法连网的机器上呢？<br>使用命令：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm config set prefix <span class="string">"I:\Program Files\npm"</span> npm config set cache <span class="string">"I:\Program Files\npm-cache"</span></div></pre></td></tr></table></figure>
+<p>由于node全局模块大多数都是提供命令行访问的，所以还要把 <code>D:\nodejs\npm</code> 加到系统PATH里面，注意同时需要将以前的默认路径从PATH中删除。</p>
+<h3 id="修改npm库"><a href="#修改npm库" class="headerlink" title="修改npm库"></a>修改npm库</h3><p>淘宝针对国内下载npm库缓慢的问题，使用建立自己的cnpm库，可以很方便使用在公司内部使用。<br>地址：<a href="http://npm.taobao.org/" target="_blank" rel="external">http://npm.taobao.org/</a></p>
+<p>使用淘宝的NPM库镜像</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g cnpm --registry=http:<span class="comment">//registry.npm.taobao.org</span></div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      nmp与npm-cache目录修改
+    
+    </summary>
+    
+      <category term="nodejs" scheme="http://ling007.cn/categories/nodejs/"/>
+    
+    
+      <category term="nodejs" scheme="http://ling007.cn/tags/nodejs/"/>
+    
+      <category term="npm" scheme="http://ling007.cn/tags/npm/"/>
+    
+      <category term="npm-cache" scheme="http://ling007.cn/tags/npm-cache/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>win10简单优化</title>
+    <link href="http://ling007.cn/2017/06/01/win10%E7%AE%80%E5%8D%95%E4%BC%98%E5%8C%96/"/>
+    <id>http://ling007.cn/2017/06/01/win10简单优化/</id>
+    <published>2017-06-01T04:32:48.000Z</published>
+    <updated>2017-06-01T06:52:30.346Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1-安装完win10纯净版后，去掉win10自动升级"><a href="#1-安装完win10纯净版后，去掉win10自动升级" class="headerlink" title="1.安装完win10纯净版后，去掉win10自动升级"></a>1.安装完win10纯净版后，去掉win10自动升级</h3><p>打开任务管理器——找到服务——window update——修改属性为禁止升级</p>
+<h3 id="2-激活系统"><a href="#2-激活系统" class="headerlink" title="2.激活系统"></a>2.激活系统</h3><p>KMSpico链接：<a href="http://pan.baidu.com/s/1cFtrFS" target="_blank" rel="external">http://pan.baidu.com/s/1cFtrFS</a> 密码：<a href="fixj">fixj</a><br>KMS_VL_ALL链接：<a href="http://pan.baidu.com/s/1hsjYXqk" target="_blank" rel="external">http://pan.baidu.com/s/1hsjYXqk</a> 密码：<a href="ezw2">ezw2</a><br>win10激活批处理kms-bat链接：<a href="http://pan.baidu.com/s/1mhGKAhU" target="_blank" rel="external">http://pan.baidu.com/s/1mhGKAhU</a> 密码：<a href="wgqe">wgqe</a>  </p>
+<h3 id="3-删除onedrive"><a href="#3-删除onedrive" class="headerlink" title="3.删除onedrive"></a>3.删除onedrive</h3><p>1） 关于禁止onedrive自启动简单的就是在任务管理器的启动中禁用onedrive的启动项目就可以。</p>
+<p>2）关于组策略管理</p>
+<p>运行gpedit.msc，进入【计算机配置】-【管理模板】-【windows组件】-【onedrive】，右侧的三个选项：<br>默认情况下，将文档保存到 OneDrive，选择禁用；<br>禁止使用 OneDrive 进行文件存储，选择启用<br>禁止OneDrive 文件通过按流量的连接同步，选择启用。 </p>
+<p>如果是准备彻底删除onedrive，组策略的这三项其实是不用理会的，因为onedrive都没有了，这个策略设置就毫无意义。这个策略可能适用于同步行为的设置。</p>
+<p>3）关于删除onedrive的程序卸载<br>卸载方法一：<br>运行输入 %localappdata%\Microsoft\OneDrive\ ,查看版本号，一般是一串数值的形式。<br>运行CMD命令，输入%localappdata%\Microsoft\OneDrive\XXXXXXXXXXXXXXX(刚才查看到的那个版本号)\OneDriveSetup /uninstall，这个命令可以卸载掉大多的onedrive程序，剩余的可以自行删除（可能须要权限设置或者以管理员模式运行cmd）  </p>
+<p>卸载方法二：<br>强制删除。直接通过取得权限的方式来删除%localappdata%\Microsoft \onedrive文件夹（取得权限以后，可能需要先在进程中关闭掉相应的onedrive进程，才能把文件夹删除干净）  </p>
+<p>其实要是操作到卸载这一步的话，第1）点和第2）点的操作就属于重复操作。  </p>
+<p>4）关于删除导航栏中的onedrive。<br>卸载onedrive是不能清除导航栏里面的onedrive，进入注册表：<br>HKEY_CLASSES_ROOT\CLSID{018D5C66-4533-4307-9B53-224DE2ED1FE6}\ShellFolder<br>把右侧的Attributes属性的值 f080004d修改为f090004d。<br>任务管理器中重启资源管理器后就生效了。  </p>
+<h3 id="4-安装framework3-5"><a href="#4-安装framework3-5" class="headerlink" title="4.安装framework3.5"></a>4.安装framework3.5</h3><p>把原版镜像里的sxs解压放在盘根目录下:<br>打开cmd:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">dism.exe /online /enable-feature /featurename:NetFX3 /Source:I:\sxs</div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      win10简单优化
+    
+    </summary>
+    
+      <category term="windows" scheme="http://ling007.cn/categories/windows/"/>
+    
+    
+      <category term="win10" scheme="http://ling007.cn/tags/win10/"/>
+    
+      <category term="优化" scheme="http://ling007.cn/tags/%E4%BC%98%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>github+page+hexo搭建个人博客</title>
+    <link href="http://ling007.cn/2017/06/01/github+page+hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://ling007.cn/2017/06/01/github+page+hexo搭建个人博客/</id>
+    <published>2017-05-31T16:00:00.000Z</published>
+    <updated>2017-06-01T13:30:42.822Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="github-page-hexo搭建个人博客"><a href="#github-page-hexo搭建个人博客" class="headerlink" title="github+page+hexo搭建个人博客"></a>github+page+hexo搭建个人博客</h1><h2 id="github创建项目"><a href="#github创建项目" class="headerlink" title="github创建项目"></a>github创建项目</h2><h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><h1 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h1><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>编辑站点配置文件，hexo/_config.yml。</p>
+<h2 id="启用主题"><a href="#启用主题" class="headerlink" title="启用主题"></a>启用主题</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">theme: indigo</div></pre></td></tr></table></figure>
+<h2 id="基本配置"><a href="#基本配置" class="headerlink" title="基本配置"></a>基本配置</h2><p>为了得到更好的使用体验，以下内容请务必填写完整，因为这些内容会在主题中得到展示。更多</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">title: your title</div><div class="line">subtitle: your subtitle</div><div class="line">description: your description</div><div class="line">keywords: your keywords</div><div class="line">author: your name</div><div class="line">email: your email</div><div class="line">url: your site url</div></pre></td></tr></table></figure>
+<h2 id="feed配置"><a href="#feed配置" class="headerlink" title="feed配置"></a>feed配置</h2><p>参考 hexo-generator-feed<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">feed:</div><div class="line">  type: atom</div><div class="line">  path: atom.xml</div><div class="line">  limit: 0</div></pre></td></tr></table></figure></p>
+<h2 id="jsonContent配置"><a href="#jsonContent配置" class="headerlink" title="jsonContent配置"></a>jsonContent配置</h2><p>为了节约资源，可以对 jsonContent 插件生成的数据字段进行配置，减少数据文件大小。参考 hexo-generator-json-content<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">jsonContent:</div><div class="line">  meta: false</div><div class="line">  pages: false</div><div class="line">  posts:</div><div class="line">    title: true</div><div class="line">    date: true</div><div class="line">    path: true</div><div class="line">    text: true</div><div class="line">    raw: false</div><div class="line">    content: false</div><div class="line">    slug: false</div><div class="line">    updated: false</div><div class="line">    comments: false</div><div class="line">    link: false</div><div class="line">    permalink: false</div><div class="line">    excerpt: false</div><div class="line">    categories: false</div><div class="line">    tags: true</div></pre></td></tr></table></figure></p>
+<h2 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h2><p>编辑主题配置文件，themes/indigo/_config.yml。</p>
+<h2 id="左侧菜单"><a href="#左侧菜单" class="headerlink" title="左侧菜单"></a>左侧菜单</h2><p>默认配置如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">menu:</div><div class="line">  home:</div><div class="line">    text: 主页</div><div class="line">    url: /</div><div class="line">  archives:</div><div class="line">    url: /archives</div><div class="line">  tags:</div><div class="line">    url: /tags</div><div class="line">  github:</div><div class="line">    url: https://github.com/yscoder</div><div class="line">    target: _blank</div><div class="line">  weibo:</div><div class="line">    url: http://www.weibo.com/ysweb</div><div class="line">    target: _blank</div><div class="line">  link:</div><div class="line">    text: 测试</div><div class="line">    url: /</div></pre></td></tr></table></figure></p>
+<p>添加新菜单项时，在 menu 下增加子属性即可。属性说明如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">menu:</div><div class="line"> link:               # fontawesome图标，省略前缀，本主题前缀为 icon-，必须</div><div class="line">   text: About       # 菜单显示的文字，如果省略即默认与图标一致，首字母会转大写</div><div class="line">   url: /about       # 链接，绝对或相对路径，必须</div><div class="line">   target: _blank    # 是否跳出，省略则在当前页面打开</div><div class="line">fontawesome 图标已集成到主题中，你可以到 这个页面 挑选合适的图标。</div></pre></td></tr></table></figure></p>
+<h2 id="rss"><a href="#rss" class="headerlink" title="rss"></a>rss</h2><p>6.x 后移除该配置项，使用站点配置中的 feed 作为统一配置。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">rss: /atom.xml</div></pre></td></tr></table></figure></p>
+<h2 id="favicon"><a href="#favicon" class="headerlink" title="favicon"></a>favicon</h2><p>站点 logo，显示在浏览器当前标签页左上角。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">favicon: /favicon.ico</div></pre></td></tr></table></figure></p>
+<h2 id="头像"><a href="#头像" class="headerlink" title="头像"></a>头像</h2><p>位于左侧菜单上方<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">avatar: /img/logo.jpg</div></pre></td></tr></table></figure></p>
+<h2 id="email"><a href="#email" class="headerlink" title="email"></a>email</h2><p>头像下方<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">email: 634206017@qq.com</div></pre></td></tr></table></figure></p>
+<h2 id="color"><a href="#color" class="headerlink" title="color"></a>color</h2><p>设置 Android L Chrome 浏览器状态栏颜色，不需要可去除此项或设为 false。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">color: &apos;#3F51B5&apos;</div></pre></td></tr></table></figure></p>
+<h2 id="标签页-old"><a href="#标签页-old" class="headerlink" title="标签页 (old)"></a>标签页 (old)</h2><p>配置标签页标题<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">tags:</div><div class="line">  title: 标签</div></pre></td></tr></table></figure></p>
+<h2 id="页面标题-card-theme"><a href="#页面标题-card-theme" class="headerlink" title="页面标题 (card theme)"></a>页面标题 (card theme)</h2><p>自定义归档、标签、分类页的大标题。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">tags_title: Tags</div><div class="line">archives_title: Archives</div><div class="line">categories_title: Categories</div></pre></td></tr></table></figure></p>
+<h2 id="文章摘要"><a href="#文章摘要" class="headerlink" title="文章摘要"></a>文章摘要</h2><p>可以在 Markdown 文件中加 <a id="more"></a>以分割摘要与文章正文。未设置时，按 excerpt_length 设置截取。<br>文章摘要渲染方式: 为 true 时将渲染为 html，否则为文本<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">excerpt_render: false</div></pre></td></tr></table></figure></p>
+<p>截断长度<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">excerpt_length: 200</div></pre></td></tr></table></figure></p>
+<p>文字正文页链接文字<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">excerpt_link: 阅读全文...</div></pre></td></tr></table></figure></p>
+<h2 id="mathjax"><a href="#mathjax" class="headerlink" title="mathjax"></a>mathjax</h2><p>开启后，使你的站点支持公式渲染，by mathjax。 请按需开启，因为此项需要加载额外的 js 文件。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mathjax: false</div></pre></td></tr></table></figure></p>
+<h2 id="分享"><a href="#分享" class="headerlink" title="分享"></a>分享</h2><p>文章分享开关，by jiathis-api。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">share: true</div></pre></td></tr></table></figure></p>
+<h2 id="文章打赏"><a href="#文章打赏" class="headerlink" title="文章打赏"></a>文章打赏</h2><p>默认开启<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">reward:</div><div class="line">  title: 谢谢大爷~             #显示的文字</div><div class="line">  wechat: /img/wechat.jpg     #微信，关闭设为 false</div><div class="line">  alipay: /img/alipay.jpg     #支付宝，关闭设为 false</div></pre></td></tr></table></figure></p>
+<p>此外在 crad theme 中，可以通过在 markdown 头部添加 reward: false 来控制某些不想开启打赏的页面。</p>
+<p>关闭</p>
+<p>reward: false<br>二维码请自行从微信、支付宝中下载。当两个二维码同时存在时，为保持显示效果的一致性，注意截图时的边框留白保持一致。必要时可借助PS等图片处理工具进行图片大小裁剪、压缩等。</p>
+<h2 id="站内搜索"><a href="#站内搜索" class="headerlink" title="站内搜索"></a>站内搜索</h2><p>是否开启搜索<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">search: true</div></pre></td></tr></table></figure></p>
+<h2 id="布局"><a href="#布局" class="headerlink" title="布局"></a>布局</h2><p>开启后，文章页在大屏下会隐藏左侧菜单，专注阅读。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hideMenu: true</div></pre></td></tr></table></figure></p>
+<h2 id="Toc"><a href="#Toc" class="headerlink" title="Toc"></a>Toc</h2><p>开启文章内容导航。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">#toc: false  #关闭</div><div class="line">toc:</div><div class="line">  list_number: false  # 决定导航使用的标签， true 为 ol， false 为 ul。</div></pre></td></tr></table></figure></p>
+<h2 id="copyright-card-theme"><a href="#copyright-card-theme" class="headerlink" title="copyright (card theme)"></a>copyright (card theme)</h2><p>文章页版权声明内容，hexo中所有变量及辅助函数等均可调用，具体请查阅 hexo.io。</p>
+<p>copyright: 这里写留言或版权声明：<a href="<%- url_for(page.path) %>" target="_blank" rel="external">&lt;%- url %&gt;</a></p>
+<h2 id="less"><a href="#less" class="headerlink" title="less"></a>less</h2><p>设置 less 编译时的入口文件路径，hexo-renderer-less。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">less:</div><div class="line">  compress: true    # 是否压缩css</div><div class="line">  paths:</div><div class="line">    - source/css/style.less</div></pre></td></tr></table></figure></p>
+<h2 id="评论"><a href="#评论" class="headerlink" title="评论"></a>评论</h2><p>集成了多说和 disqus，开启其一即可。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">duoshuo-key 即多说创建站点时的二级域名。如：abc.duoshuo.com，就填 abc。</div><div class="line">duoshuo: duoshuo-key </div><div class="line">或</div><div class="line"></div><div class="line">disqus_shortname: disqus_shortname</div></pre></td></tr></table></figure></p>
+<h2 id="数据统计"><a href="#数据统计" class="headerlink" title="数据统计"></a>数据统计</h2><p>集成的有谷歌和 CNZZ，请填写你的站点标识。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">google_analytics: key</div><div class="line">cnzz: 站点id</div></pre></td></tr></table></figure></p>
+<h2 id="谷歌站点验证-card-theme"><a href="#谷歌站点验证-card-theme" class="headerlink" title="谷歌站点验证 (card theme)"></a>谷歌站点验证 (card theme)</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">google_site_verification: false</div></pre></td></tr></table></figure>
+<h2 id="规范网址-card-theme"><a href="#规范网址-card-theme" class="headerlink" title="规范网址 (card theme)"></a>规范网址 (card theme)</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">让搜索引擎重定向你的不同域名、不同子域、同域不同目录的站点到你期望的路径。使用规范网址</div><div class="line">canonical: http://imys.net</div></pre></td></tr></table></figure>
+<h2 id="版权起始年份"><a href="#版权起始年份" class="headerlink" title="版权起始年份"></a>版权起始年份</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">since_year: 2006</div></pre></td></tr></table></figure>
+<h2 id="自定义页面关于"><a href="#自定义页面关于" class="headerlink" title="自定义页面关于"></a>自定义页面关于</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">用户页面中作者相关的描述性文字，如不需要设为 false</div><div class="line">about: 用户页面中作者相关的描述性文字，如不需要设为 false</div></pre></td></tr></table></figure>
+<h2 id="hexo-deployer-git"><a href="#hexo-deployer-git" class="headerlink" title="hexo-deployer-git"></a>hexo-deployer-git</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
+<p>If you want to use the latest features of hexo-deployer-git, you may install it from github,<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install git+git@github.com:hexojs/hexo-deployer-git.git --save</div></pre></td></tr></table></figure></p>
+<p>You can configure this plugin in <code>_config.yml</code>.</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># You can use this:</span></div><div class="line"><span class="attr">deploy:</span></div><div class="line"><span class="attr">  type:</span> <span class="string">git</span></div><div class="line"><span class="attr">  repo:</span> <span class="string">&lt;repository</span> <span class="string">url&gt;</span></div><div class="line"><span class="attr">  branch:</span> <span class="string">[branch]</span></div><div class="line"><span class="attr">  message:</span> <span class="string">[message]</span></div><div class="line"><span class="attr">  name:</span> <span class="string">[git</span> <span class="string">user]</span></div><div class="line"><span class="attr">  email:</span> <span class="string">[git</span> <span class="string">email]</span></div><div class="line"><span class="attr">  extend_dirs:</span> <span class="string">[extend</span> <span class="string">directory]</span></div><div class="line"><span class="attr">  ignore_hidden:</span> <span class="literal">false</span> <span class="comment"># default is true</span></div><div class="line"><span class="attr">  ignore_pattern:</span> <span class="string">regexp</span>  <span class="comment"># whatever file that matches the regexp will be ignored when deploying</span></div><div class="line"></div><div class="line"><span class="comment"># or this:</span></div><div class="line"><span class="attr">deploy:</span></div><div class="line"><span class="attr">  type:</span> <span class="string">git</span></div><div class="line"><span class="attr">  message:</span> <span class="string">[message]</span></div><div class="line"><span class="attr">  repo:</span></div><div class="line"><span class="attr">    github:</span> <span class="string">&lt;repository</span> <span class="string">url&gt;,[branch]</span></div><div class="line"><span class="attr">    coding:</span> <span class="string">&lt;repository</span> <span class="string">url&gt;,[branch]</span></div><div class="line"><span class="attr">  extend_dirs:</span></div><div class="line"><span class="bullet">    -</span> <span class="string">[extend</span> <span class="string">directory]</span></div><div class="line"><span class="bullet">    -</span> <span class="string">[another</span> <span class="string">extend</span> <span class="string">directory]</span></div><div class="line"><span class="attr">  ignore_hidden:</span></div><div class="line"><span class="attr">    public:</span> <span class="literal">false</span></div><div class="line">    <span class="string">[extend</span> <span class="string">directory]:</span> <span class="literal">true</span></div><div class="line">    <span class="string">[another</span> <span class="string">extend</span> <span class="string">directory]:</span> <span class="literal">false</span></div><div class="line"><span class="attr">  ignore_pattern:</span></div><div class="line">    <span class="string">[folder]:</span> <span class="string">regexp</span>  <span class="comment"># or you could specify the ignore_pattern under a certain directory</span></div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      搭建个人博客
+    
+    </summary>
+    
+      <category term="skill" scheme="http://ling007.cn/categories/skill/"/>
+    
+    
+      <category term="skill" scheme="http://ling007.cn/tags/skill/"/>
+    
+      <category term="github" scheme="http://ling007.cn/tags/github/"/>
+    
+      <category term="hexo" scheme="http://ling007.cn/tags/hexo/"/>
+    
+  </entry>
+  
+</feed>
